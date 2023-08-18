@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1"
+  },
+  "name": "grade-analyzer",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincent-t-wan/grade-analyzer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vincent-t-wan/grade-analyzer/issues"
+  },
+  "homepage": "https://github.com/vincent-t-wan/grade-analyzer#readme",
+  "description": ""
+}
