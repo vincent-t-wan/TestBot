@@ -9,5 +9,4 @@
 8. "open dedicated devtools for Node"
 
 
-Tools:
 - Node.js, nodemon, discord.js, chrome devtools, dotenv, 
