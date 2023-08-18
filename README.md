@@ -11,3 +11,11 @@
 
 Tools:
 - Node.js, nodemon, discord.js, chrome devtools, dotenv, 
+
+
+'npm install @discordjs/builders @discordjs/rest discord-api-types'
+- builders creates API-compatible JSON data for slash commands
+- rest for sending slash commands
+- types for endpoint routes
+
+run 'node deploy-commands.js' to register application commands
