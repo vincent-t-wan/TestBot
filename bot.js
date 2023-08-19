@@ -21,10 +21,20 @@ client.on("interactionCreate", async interaction => {
 
 	const { commandName } = interaction;
 
-	if (commandName === 'server') {
-		await interaction.reply('Server info.');
-	} else if (commandName === 'user') {
-		await interaction.reply('User info.');
+	if (commandName === 'upload') {
+		await interaction.reply('uploading...');
+	} else if (commandName === 'display') {
+        type = interaction.options.getString('type')
+        switch(type) {
+            case 'grades':
+                await interaction.reply('displaying grades...');
+
+                break;
+            case 'classes':
+                await interaction.reply('displaying classes...');
+                break;
+            default:
+          }
 	}
 
 });
