@@ -1,15 +1,15 @@
 // bot commands
 
-require('dotenv').config();
-const { SlashCommandBuilder } = require('@discordjs/builders');
-const { REST } = require('@discordjs/rest');
-const { Routes } = require('discord-api-types/v9');
+import 'dotenv/config';
+import { SlashCommandBuilder } from '@discordjs/builders';
+import { REST } from '@discordjs/rest';
+import { Routes } from 'discord-api-types/v9';
 
 const commands = [
     // .setOptions
 	new SlashCommandBuilder()
 		.setName('upload')
-		.setDescription('Upload your transcript!'),
+		.setDescription('Upload your transcript/s! (currently only accepting .pdf and .txt file formats)'),
 	new SlashCommandBuilder()
 		.setName('display')
 		.setDescription('Display statistics!')
@@ -21,7 +21,7 @@ const commands = [
 										{ name: 'grades', value: 'grades' },
 										{ name: 'classes', value: 'classes' },
 									)
-									),
+						),
 ].map(command => command.toJSON());
 
 const rest = new REST({ version: '9' }).setToken(process.env.DISCORD_TOKEN);
