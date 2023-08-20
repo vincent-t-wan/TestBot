@@ -9,7 +9,7 @@ const commands = [
     // .setOptions
 	new SlashCommandBuilder()
 		.setName('upload')
-		.setDescription('Upload your transcript/s! (currently only accepting .pdf and .txt file formats)'),
+		.setDescription('Upload your transcript/s! (currently only accepting PDFs and plain text files)'),
 	new SlashCommandBuilder()
 		.setName('display')
 		.setDescription('Display statistics!')

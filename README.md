@@ -22,3 +22,4 @@ run 'node deploy-commands.js' to register application commands
 
 'npm i node-fetch' for reading file attachments
 'npm install dotenv --save' for loading environment variables
+'npm install pdfreader' for reading pdf files

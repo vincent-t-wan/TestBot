@@ -6,7 +6,8 @@
     "discord.js": "^14.13.0",
     "dotenv": "^16.3.1",
     "node-fetch": "^3.3.2",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "pdfreader": "^3.0.2"
   },
   "name": "grade-analyzer",
   "version": "1.0.0",

@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import Discord from "discord.js";
 import fetch from 'node-fetch';
+import { parse } from './parser.js';
 const client = new Discord.Client({intents: ["Guilds", "GuildMessages", "MessageContent"]});
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`)
@@ -29,28 +30,34 @@ client.on("messageCreate", async msg => {
                 }
 
                 try {
-
                     const response = await fetch(url);
+                    console.log(response)
                     if (!response.ok) {
                         msg.reply(
                             'there was an error with fetching file ' + index + ': ' + response.statustext
                         );
                         continue;
                     }
-
-                    const text = await response.text();
-
-                    if (text) {
-                        msg.reply(text);
+                    if (msg.attachments.at(index).contentType.includes('text/plain')) {
+                        const text = await response.text();
+                        if (text) {
+                            msg.reply(text);
+                        }
+                    } else if (msg.attachments.at(index).contentType.includes('application/pdf')) {
+                        const buffer = await response.arrayBuffer();
+                        await parse(buffer, msg);
+                    } else {
+                        msg.reply(
+                            'error: file is not a PDF or a plain text'
+                        );
+                        continue;        
                     }
-
                 } catch (error) {
                     console.log(error);
                     continue;
                 }
             }
             msg.reply('completed parsing files!');
-
             // TO-DO: add different messages depending on errors/issues/situations
         } else {
             msg.reply('message is not a file. upload process cancelled.');
