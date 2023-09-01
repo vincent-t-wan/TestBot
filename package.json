@@ -2,12 +2,21 @@
   "dependencies": {
     "@discordjs/builders": "^1.6.5",
     "@discordjs/rest": "^2.0.1",
+    "@tensorflow/tfjs": "^4.10.0",
+    "ascii-table": "^0.0.9",
+    "danfojs-node": "^1.1.2",
     "discord-api-types": "^0.37.54",
     "discord.js": "^14.13.0",
+    "dom-to-image": "^2.6.0",
     "dotenv": "^16.3.1",
+    "g": "^2.0.1",
+    "gaussian": "^1.3.0",
+    "jsdom": "^22.1.0",
+    "mariadb": "^3.2.0",
     "node-fetch": "^3.3.2",
     "nodemon": "^3.0.1",
-    "pdfreader": "^3.0.2"
+    "pdfreader": "^3.0.2",
+    "sequelize": "^6.32.1"
   },
   "name": "grade-analyzer",
   "version": "1.0.0",
@@ -27,5 +36,5 @@
     "url": "https://github.com/vincent-t-wan/grade-analyzer/issues"
   },
   "homepage": "https://github.com/vincent-t-wan/grade-analyzer#readme",
-  "description": ""
+  "description": "1. create bot.js\r 2. 'npm i g nodemon'\r 3. 'npm install --save discord.js dotenv nodemon'\r 4. 'npm init -y'\r 5. 'Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted'\r 6. run with 'nodemon --inspect bot.js\r 7. 'chrome://inspect/' on chrome\r 8. \"open dedicated devtools for Node\""
 }
